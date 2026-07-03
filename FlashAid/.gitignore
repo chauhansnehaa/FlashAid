@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+app/build/
+*.iml
+
+# Local configuration file (contains SDK path, machine-specific)
+local.properties
+
+# Firebase config (contains project API keys — do NOT commit)
+app/google-services.json
+
+# Log/OS files
+*.log
+.DS_Store
+
+# Android Studio / IntelliJ
+.idea/
+*.hprof
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystore files (never commit signing keys)
+*.jks
+*.keystore

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8"
+    android:padding="16dp"
+    tools:context=".PatientRequestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF6B6B"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp"
+            android:clipToOutline="true"
+            android:backgroundTintMode="src_in">
+
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Patient Form"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fill out patient information for immediate medical assistance"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Patient Info Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:text="Patient Information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="center_vertical" />
+
+            <!-- Patient Name -->
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Patient Name"
+                android:drawableStart="@drawable/ic_person"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Patient Age -->
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Patient Age"
+                android:drawableStart="@drawable/ic_calendar"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:inputType="number"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Contact -->
+            <EditText
+                android:id="@+id/etContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number"
+                android:drawableStart="@drawable/ic_phone"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:inputType="phone"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Condition Severity -->
+            <TextView
+                android:text="Condition Severity:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#555"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMild"
+                    style="@style/SeverityButton"
+                    android:text="Mild" />
+
+                <Button
+                    android:id="@+id/btnModerate"
+                    style="@style/SeverityButtonSelected"
+                    android:text="Moderate"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnCritical"
+                    style="@style/SeverityButton"
+                    android:text="Critical" />
+            </LinearLayout>
+
+            <!-- Symptoms -->
+            <EditText
+                android:id="@+id/etSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Symptoms / Additional Information"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginTop="14dp"
+                android:minLines="3"
+                android:gravity="top" />
+        </LinearLayout>
+
+        <!-- Quick Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:text="Quick Actions"
+                android:textColor="#333"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit Emergency Request"
+                android:backgroundTint="#00B894"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:padding="14dp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
